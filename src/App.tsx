@@ -8,6 +8,7 @@ import {
 import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
 import { authProvider } from "./authProvider";
+import { MapContainer } from "./Map";
 
 export const App = () => (
   <Admin
@@ -15,6 +16,12 @@ export const App = () => (
     dataProvider={dataProvider}
     authProvider={authProvider}
   >
+    <Resource
+      name="map"
+      list={MapContainer}
+      edit={EditGuesser}
+      show={ShowGuesser}
+    />
     <Resource
       name="posts"
       list={ListGuesser}
